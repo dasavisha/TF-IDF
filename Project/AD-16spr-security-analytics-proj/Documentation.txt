@@ -1,0 +1,74 @@
+COSC 6397 - Security Analytics Course Project: Detection of Reviews using Semantic Analysis - Documentation File
+-----------------------------------------------------------------------------------------------------------------
+
+Data Used:
+-------------
+
+1. op_spam_v1.4: This is the folder containing all the 800 fake and real reviews divided into two categories: Positive Polarity and Negative Polarity
+2. negative-words.txt: A lexicon containng the most commonly used words to express negative sentiment
+3. positive-words.txt: A lexicon containng the most commonly used words to express positive sentiment
+
+Scripts Used:
+--------------
+
+1. document_parser.py: A script to parse inside the master Opinion Spam folder and punch the files according to their polarity and rename them according to the pathname. The file name was then changed manually according to the one that is desired.
+2. punch.py: A script to manually punch the files listed under a hardcoded directory path in the script to one single .txt file.
+3. script.sh: Concatenation of the outputs of the above two scripts into 4 separate scripts. <This was done on a Linux machine>
+4. pos_lex_extraction.py: A script to calculate the frequencies of the words in the given lexicon in a document file and output to a file.
+5. classification_script.py: A script to include the necessary packages to run the Naive Bayes Classifier and run the classifier on the input file and test on a supplied test dataset.
+6. tuple_maker.py: A script to load a test file into tuples and then run the Naive Bayes Classifier on it. 
+7. tfidf.py: A testing script to calculate the tfidf values of an input file and extract them from another test file
+8. bag-of-words.py: A testing script to calculate the frequency of the words from an input file
+9. csv_file_reader.py: A testing script to read a CSV file given as an input
+10. feature_extractor.py:  A testing script to combine tfidf and bag-of-words technique to print the frequency based feature extraction
+11. feature_extractor_2.py: The final script combining 7, 8, 9 and 10 and output the results to a SVM file as an input to the SVMlight software.
+
+Running Scripts:
+----------------
+
+1. document_parser.py: python document_parser.py ; after placing the script in the desired master folder and adjusting the path accordingly in the script.
+2. punch.py: python punch.py ; hardcoded output file name - can be adjusted to change the name and path
+3. script.sh: ./script.sh ; to punch the files into a single text.
+4. pos_lex_extraction.py: python pos_lex_extraction.py <name_of_lexicon> <text_file> <out_file> ; this extracts the frequencies of the words, from a lexicon supplied to it, in a document and outputs the frequencies to a file.
+5. classification_script.py: python classification_script.py <input training dataset> <input testing dataset> > <writing to output file> ; this is the script to run the classifier on the input training dataset and then test it on the input testing dataset. The datasets are both in the .CSV format and the output file is in .txt format
+6. tuple_maker.py: python tuple_maker.py <input training dataset> <input testing dataset> > <writing to output file> ; this is similar to #5 but I have experimented a little bit to explore the other reading option of the classifier.
+7. tfidf.py: python tfidf.py test_tr.txt test_tt.txt abc.txt 
+8. bag-of-words.py: python bag-of-words.py 
+9. csv_file_reader.py: python csv_file_reader.py <input_file.csv>
+10. feature_extractor.py: python feature_extractor.py <training file.csv> <file_in.csv> <outputfile.svm>
+11. feature_extractor_2.py: python feature_extractor_2.py <model_file.csv> <data_file.csv> <outputfile.svm>
+
+Software Used:
+----------------
+
+1. Python v2.7: The python version used for running my scripts written in Python
+2. Microsoft Excel: The inbuilt Excel software on Windows to manipulate my results and csv files
+3. TextBlob: The python NLTK package for text classification (in this case used for Naive Bayes Classification). The documentation for this library is available on: https://textblob.readthedocs.io/en/latest/install.html
+	---> Installation procedure:
+			pip install -U textblob
+			python -m textblob.download_corpora
+			python setup.py install
+	---> Usage:
+			import textblob
+	---> Running Naive Bayes Classifier:
+			from textblob.classifiers import NaiveBayesClassifier
+4. NLTK: The Python Library for text classification and analysis
+5. Scikit-Learn: The Python library for performing various machine learning tasks.
+6. SVMlight: The library for building Support Vector Machines. The documentation for this package is available on: https://www.cs.cornell.edu/people/tj/svm_light/old/svm_light_v5.00.html
+	---> Installation procedure:
+			mkdir svm_light
+			Download:  http://download.joachims.org/svm_light/v5.00/svm_light_windows.zip
+			Unzip the contents
+	---> Running the classifier:
+			svm_learn [options] example_file model_file
+			svm_classify [options] example_file model_file output_file
+
+Outputs:
+--------------
+
+1. Punched_datafiles: Output of document_parser.py, punch.py and script.sh
+2. CSV_datasets: Output of Microsoft excel after creating the datasets
+3. Frequency_calc_datasets: Frequency of the words from the lexicon in the dataset
+4. Naive_Bayes Output_files: Output files for the Naive Bayes Classifier
+5. SVM_Classifier Output_files: Output files for the SVM Classification technique
+6. SVM_dataset: Output of the Feature Extractor

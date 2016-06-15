@@ -1,0 +1,13 @@
+--- 0.0 seconds ---
+Training...
+--- 2249.41799998 seconds ---
+Testing...
+Writing to file...
+0.825
+Most Informative Features
+         contains(dirty) = True              neg : pos    =     20.1 : 1.0
+          contains(rude) = True              neg : pos    =     18.0 : 1.0
+       contains(perfect) = True              pos : neg    =     13.4 : 1.0
+       contains(finally) = True              neg : pos    =     13.1 : 1.0
+       contains(manager) = True              neg : pos    =     13.1 : 1.0
+--- 3009.31399989 seconds ---

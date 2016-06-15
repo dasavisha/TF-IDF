@@ -1,0 +1,21 @@
+Naive Bayes Classifier
+---------------------- 
+Steps:
+1. cd C:\Users\Avisha\Desktop\SPRING 2016\Security Analytics\Project\Scripts
+2. python classification_script.py Real_train.csv Real_test.csv 
+Train on Real reviews(70% dataset) Test on Real reviews(30%)
+This will print to the console
+Total time taken ~15 mins
+
+SVM
+-----------------------
+Steps:
+1. Features extraction and conversion to SVM
+cd C:\Users\Avisha\Desktop\SPRING 2016\Security Analytics\Project\Scripts
+python feature_extractor_2.py Real_train.csv Real_train.csv Real_train_fin.svm
+python feature_extractor_2.py Real_train.csv Real_test.csv Real_test_fin.svm
+
+2. Running SVM
+cd C:\Users\Avisha\Desktop\SPRING 2016\Security Analytics\Project
+svm_learn Real_train_fin.svm Real_final_model
+svm_classify Real_test_fin.svm Real_final_model out_file.txt

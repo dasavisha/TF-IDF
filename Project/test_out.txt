@@ -1,0 +1,6 @@
+Frequency Calculator based on Lexicon: 
+high:2
+school:2
+cullen:1
+south:1
+das:3

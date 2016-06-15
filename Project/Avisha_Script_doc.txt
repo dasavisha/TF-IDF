@@ -1,0 +1,28 @@
+Experiment 1: Extraction of Frequencies of words in Lexicon in the document
+-----------------------------------------------------------------------------
+1. python pos_lex_extraction.py <name_of_lexicon> <text_file> <out_file>
+Requirements: The necessary lexicon and the document in .txt format 
+Problem: It catches all occurences of the word, and catches first occurence.
+
+Experiment 2: Running Naive Bayes Classifier
+-----------------------------------------------------
+2. python classification_script.py Real_train.csv Real_test.csv > output_NB.txt
+Requirements: The Training file in csv format and testing file in csv format; Softwares: TextBlob package  
+Problem: It does the classification using a prebuilt Naive Bayes Classifier
+
+Experiment 3: Feature Extraction for the SVM file
+----------------------------------------------------
+3. python feature_extractor_2.py model_file.csv Train_file.csv Train_file.svm
+Requirements: The training file can be used as the model file. Then used a training file to convert it to the svm format and similarly the test file.
+Software Requirements: NLTK, SciKit Learn
+
+Experiment 4: Running the SVM
+--------------------------------
+4. svm_learn training_file model_file
+   svm_classify svm_classify test_file model_file output_file
+Requirements: Training File and testing file in SVM format. 
+Software: SVMLight for Windows
+
+
+
+ 

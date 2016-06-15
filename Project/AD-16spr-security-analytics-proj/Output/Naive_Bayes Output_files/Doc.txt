@@ -1,0 +1,6 @@
+Description:
+---------------
+
+Naming of the output file is:
+
+out_xy.txt where x = first two letters of training dataset and y = first two letters of testing dataset

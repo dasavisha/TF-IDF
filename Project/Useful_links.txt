@@ -1,0 +1,7 @@
+Links to the Data sets and Useful websites
+--------------------------------------------
+
+1. op_spam_v1.4.tar.gz ---> http://myleott.com/op_spam/
+2. SentiWord ---> http://sentiwordnet.isti.cnr.it/
+3. Opinion lexicon ---> https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html 
+4. Fake review websites ---> https://www.cs.uic.edu/~liub/FBS/fake-reviews.html

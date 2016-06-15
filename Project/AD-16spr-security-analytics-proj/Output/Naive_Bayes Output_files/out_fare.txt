@@ -1,0 +1,13 @@
+--- 0.0 seconds ---
+Training...
+--- 2083.79900002 seconds ---
+Testing...
+Writing to file...
+0.841666666667
+Most Informative Features
+       contains(finally) = True              neg : pos    =     33.1 : 1.0
+       contains(perfect) = True              pos : neg    =     30.7 : 1.0
+       contains(enjoyed) = True              pos : neg    =     30.7 : 1.0
+         contains(loved) = True              pos : neg    =     25.1 : 1.0
+       contains(smelled) = True              neg : pos    =     23.0 : 1.0
+--- 2864.9000001 seconds ---

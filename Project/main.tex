@@ -1,0 +1,74 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[noadjust]{cite}
+\usepackage{hyperref}
+
+
+\title{COSC 6397: Project Plan (Spring 2016)\\
+Detection of Reviews Using Semantic Analysis
+}
+
+\author{Avisha Das \\
+P.S. ID: 1403847}
+
+\date{March 31, 2016}
+
+\begin{document}
+\maketitle
+
+% \begin{abstract}
+% Your abstract.
+% \end{abstract}
+
+\section{Introduction}
+
+In this document I have presented a plan for my Security Analytics project. In this project I will try to apply Security Analytics techniques to a common problem in the consumer market in present times. With the boost of e-commerce and online shopping, opinion and review spamming has been on the constant rise as more and more customers depend their decisions on the online reviews on the commercial websites. These customer feedback and reviews are valuable and of high concern to the manufacturers and retailers as these play an important role in understanding the needs and preferences of the customer.\cite{survey01}
+
+Opinion spamming is a major issue for commercial websites and retailers as fake reviewers may tend to demean a particular product without having any practical knowledge of the product make and usage while on the other hand, a customer may fall for such fake reviews and end up buying a low quality product. So as a result both the buyer and the seller is prone to such deception and may incur losses due to Review Spamming.
+
+The plan of the project has been divided into the following:
+\begin{itemize}
+\item The Security Problem
+\item The Dataset Plan
+\item The Action Plan 
+\item The Literature Survey
+\end{itemize}
+
+\subsection{The Security Problem}
+Review and Opinion Spamming has become one of the major issues in the realm of Cybersecurity with the rise in the popularity of online shopping websites like Amazon and referral websites like TripAdvisor, Yelp, etc. As per common practice, people most often visit review sites while buying a product and almost always opt for the product with maximum number of positive reviews. Therefore, positive reviews can incur in a lot of financial gains for the business and organizations and individuals.
+This unfortunately is a major attraction for opinion spammers. There are also many fake sites which allow people to write fake reviews. \cite{op_web}
+
+
+\subsection{The Dataset Plan}
+The Dataset that I have plan to use for the experiment is a publicly available gold standard dataset\cite{dataset} of deceptive and truthful reviews of 20 Chicago Hotels. These datasets contain the following:
+
+\begin{itemize}
+\item 400 truthful positive reviews from TripAdvisor 
+\item 400 deceptive positive reviews from Mechanical Turk
+\item 400 truthful negative reviews from Expedia, Hotels.com, Orbitz, Priceline, TripAdvisor and Yelp
+\item 400 deceptive negative reviews from Mechanical Turk 
+\end{itemize}
+
+For the sentiment analysis, I plan on using the Opinion Lexicon which is a list of positive and negative opinion words or sentiment words for English (around 6800 words)\cite{op_set}. 
+
+\subsection{The Action Plan}
+I plan on applying the Machine Learning techniques on the labeled data set and use the opinion lexicon as a base for my classification. In other words, using a \textbf{Naive Bayes classifier} I plan to classify the reviews based on the presence of certain common words expressing sentiment like "good", "great", "clean" etc. expressing positive sentiments and "bad", "worst", "horrible" expressing negative sentiment to classify the sentiment of the review and report the accuracy of classification.
+
+The other machine Learning algorithm that I plan to apply \textbf{Logistic Regression} classifier to learn a predictive model on the labeled dataset. The logistic regression classifier is a linear classifier that gives an estimate of the probability that a review is a fake one or not. 
+
+\subsection{The Literature Survey}
+
+I searched the Google Scholar database for the list of papers on Sentiment Analysis and Opinon Mining. I have listed my list of references below.
+
+\bibliographystyle{abbrv}
+\bibliography{fake_rev}{}
+
+\end{document}
+
+
